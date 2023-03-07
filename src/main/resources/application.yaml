@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springpg
+    username: postgres
+    password: postgres
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    root: debug
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposed:
+        include: "*"
